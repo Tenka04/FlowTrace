@@ -1,0 +1,31 @@
+# Python / Backend
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+
+# Generated Output / Data (Optional, but good practice to keep out of git)
+backend/data/*.csv
+backend/data/*.json
+backend/models/*.pkl
+backend/reports/*.pdf
+
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+.npm
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
