@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api', // FastAPI backend URL
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api', // Use env var for Render
 });
 
 export const getAlerts = async (limit = 100, offset = 0) => {

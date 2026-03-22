@@ -31,6 +31,10 @@ alert_engine = AlertEngine()
 str_gen = STRGenerator()
 neo4j_loader = Neo4jLoader()
 
+@app.get("/")
+def read_root():
+    return {"message": "Flow Trace API is live and healthy!", "version": "1.0.0"}
+
 @app.on_event("startup")
 def startup_event():
     # Load alerts on startup, if empty auto-run
