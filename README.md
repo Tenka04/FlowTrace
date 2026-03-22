@@ -1,6 +1,6 @@
-# GraphSent — AI-Powered Fund Flow Tracking
+# Flow Trace — AI-Powered Fund Flow Tracking
 
-GraphSent is an AI-powered Fund Flow Tracking and Fraud Detection system for banking. Built for the PSBs Hackathon Series 2026.
+Flow Trace is an AI-powered Fund Flow Tracking and Fraud Detection system for banking. Built for the PSBs Hackathon Series 2026.
 
 ## Architecture
 

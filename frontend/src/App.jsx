@@ -10,7 +10,7 @@ function App() {
       {/* Sidebar */}
       <div className="w-64 bg-[#1a2744] text-white flex flex-col">
         <div className="p-6 border-b border-gray-700">
-          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400">GraphSent</h1>
+          <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400">Flow Trace</h1>
           <p className="text-sm text-gray-400">IDEA 2.0 Hackathon | PS3</p>
         </div>
         <nav className="flex-1 p-4 space-y-2">

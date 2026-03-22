@@ -7,7 +7,7 @@ class Neo4jLoader:
     def __init__(self):
         uri = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
         user = "neo4j"
-        password = "graphsent123"
+        password = "flowtrace123"
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
     def close(self):

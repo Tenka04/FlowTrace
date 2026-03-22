@@ -17,7 +17,7 @@ from risk_engine import RiskEngine
 from alert_engine import AlertEngine
 from str_generator import STRGenerator
 
-app = FastAPI(title="GraphSent API")
+app = FastAPI(title="Flow Trace API")
 
 app.add_middleware(
     CORSMiddleware,
