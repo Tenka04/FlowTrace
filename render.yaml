@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: flowtrace-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free # or "starter" if RAM is an issue
+    envVars:
+      - key: NEO4J_URI
+        fromService:
+          type: web
+          name: flowtrace-neo4j
+          property: host
+
+  - type: web
+    name: flowtrace-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: flowtrace-backend
+          property: url
+
+  - type: web
+    name: flowtrace-neo4j
+    env: docker
+    dockerfilePath: neo4j.Dockerfile
+    plan: starter # Neo4j NEEDS RAM
+    envVars:
+      - key: NEO4J_AUTH
+        value: neo4j/flowtrace123
+    disk:
+      name: neo4j-data
+      mountPath: /data
+      sizeGB: 10
